@@ -20,7 +20,7 @@ const UpdateMovie = props => {
     }, [props.match.params.id])
     
     const handleChange = e => {
-        setMovie({ ...movie, [event.target.name]: event.target.value})
+        setMovie({ ...movie, [e.target.name]: e.target.value})
     } 
 
     const handleSubmit = e => {
@@ -36,7 +36,7 @@ const UpdateMovie = props => {
     }
 return( 
 <div>
-    <h1>Edit Movie</h1>
+    <h1>Update Movie</h1>
     <form onSubmit={handleSubmit}>
         <input
         type='text'
@@ -66,7 +66,7 @@ return(
         value={movie.stars}
         onChange={handleChange}
         />
-        <button>Edit Movie</button>
+        <button type='submit'>Update Movie</button>
     </form>
 </div>
 )
